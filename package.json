@@ -1,0 +1,22 @@
+{
+  "name": "myracks-server",
+  "version": "1.0.0",
+  "main": "src/server.ts",
+  "scripts": {
+    "dev": "NODE_ENV=development nodemon --watch src && tslint-check",
+    "start": "nodemon ./src/server.ts",
+    "build": "tsc",
+    "prod": "npm run build  && npm run tslint && npm run start-prod",
+    "tslint": "tslint -c tslint.json -p tsconfig.json",
+    "start-prod": "nodemon ./dist/server.js",
+    "tslint-check": "tslint-config-prettier-check ./tslint.json"
+  },
+  "keywords": [],
+  "author": "dszix",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^3.0.1"
+  },
+  "dependencies": {},
+  "description": ""
+}
